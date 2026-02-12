@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { Link} from "react-router-dom";
 import { Menu, X, ShoppingCart, User, Search, ChevronDown } from "lucide-react";
+import { useSelector } from "react-redux";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [shopOpen, setShopOpen] = useState(false);
   const [mobileShopOpen, setMobileShopOpen] = useState(false);
 
+
+const cartItems = useSelector((state) => state.cart.items);
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-black/10">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between "  onMouseLeave={() => setShopOpen(false)}>
@@ -64,12 +67,13 @@ export default function Header() {
             />
           ))}
 
-          <div to="/cart" className="relative">
+          <Link to="/cart" className="relative">
             <ShoppingCart size={18} />
-            <span className="absolute -top-2 -right-2 bg-black text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">
-              2
-            </span>
-          </div>
+           <span className="absolute -top-2 -right-2 bg-black text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">
+  {cartItems.reduce((total, item) => total + item.quantity, 0)}
+</span>
+
+          </Link>
 
 
           <button className="md:hidden" onClick={() => setMobileOpen(!mobileOpen)}>
