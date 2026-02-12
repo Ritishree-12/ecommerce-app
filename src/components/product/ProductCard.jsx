@@ -13,6 +13,7 @@ export default function ProductCard({ product }) {
         flex-col
         transition
         hover:shadow-lg
+        mt-4
       "
     >
       {/* PRODUCT IMAGE */}

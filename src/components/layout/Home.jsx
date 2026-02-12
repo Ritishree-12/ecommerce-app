@@ -3,7 +3,8 @@ import homeImage from "../../assets/home.jpg";
 
 export default function Home() {
   return (
-    <section className="w-full grid grid-cols-1 md:grid-cols-2 min-h-screen">
+   <>
+     <section className="w-full grid grid-cols-1 md:grid-cols-2 min-h-screen">
 
       {/* Image Section */}
       <div className="w-full h-[60vh] md:h-full">
@@ -45,5 +46,6 @@ export default function Home() {
       </div>
 
     </section>
+   </>
   );
 }
