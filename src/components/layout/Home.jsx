@@ -1,5 +1,6 @@
 import React from "react";
 import homeImage from "../../assets/home.jpg";
+import ProductLists from "../product/ProductLists";
 
 export default function Home() {
   return (
@@ -46,6 +47,7 @@ export default function Home() {
       </div>
 
     </section>
+    <ProductLists />
    </>
   );
 }
