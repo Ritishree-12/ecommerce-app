@@ -13,7 +13,7 @@ const products = [
     name: "Soft Knit Hoodie",
     price: 2499,
     image:
-      "https://images.unsplash.com/photo-1602810316498-ab67cf68c8e1",
+      "https://images.unsplash.com/photo-1593032465175-481ac7f401a0",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const products = [
     name: "Pastel Winter Coat",
     price: 4299,
     image:
-      "https://images.unsplash.com/photo-1520975682031-a36d9b81b1b5",
+"https://images.unsplash.com/photo-1512436991641-6745cdb1723f",
   },
   {
     id: 5,
@@ -48,35 +48,6 @@ const products = [
 const ProductPage = () => {
   return (
     <div className="bg-[#FAF9F7] min-h-screen">
-      {/* HERO SECTION */}
-      <section className="grid grid-cols-1 md:grid-cols-2">
-        <div className="flex flex-col justify-center px-8 md:px-16 bg-[#F3C6B8]">
-          <h1 className="text-4xl md:text-5xl font-semibold text-[#2B2B2B] leading-tight">
-            Embrace the chill,
-            <br />
-            let nature in
-          </h1>
-
-          <p className="mt-4 text-gray-700 max-w-md">
-            Discover premium winter wear crafted with soft pastel tones
-            for comfort and elegance.
-          </p>
-
-          <button className="mt-6 w-fit bg-[#C7DBF2] text-[#2B2B2B] px-6 py-3 rounded-lg hover:bg-[#BFE3D0] transition">
-            Shop Now
-          </button>
-        </div>
-
-        <div className="h-[450px]">
-          <img
-            src="https://images.unsplash.com/photo-1602810316498-ab67cf68c8e1"
-            alt="Hero"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </section>
-
-      {/* PRODUCTS SECTION */}
       <section className="px-6 md:px-16 py-16">
         <h2 className="text-3xl font-bold text-center text-[#2B2B2B] mb-12">
           Winter Collection

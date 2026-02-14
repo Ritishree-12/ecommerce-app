@@ -4,50 +4,37 @@ import ProductLists from "../product/ProductLists";
 
 export default function Home() {
   return (
-   <>
-     <section className="w-full grid grid-cols-1 md:grid-cols-2 min-h-screen">
+    <>
+      <div className="bg-[#FAF9F7]">
+        <section className="grid grid-cols-1 md:grid-cols-2">
+          <div className="flex flex-col justify-center px-8 md:px-16 bg-[#F3C6B8]">
+            <h1 className="text-4xl md:text-5xl font-semibold text-[#2B2B2B] leading-tight">
+              Embrace the chill,
+              <br />
+              let nature in
+            </h1>
 
-      {/* Image Section */}
-      <div className="w-full h-[60vh] md:h-full">
-        <img
-          src={homeImage}
-          alt="Fashion"
-          className="w-full h-full object-cover"
-        />
+            <p className="mt-4 text-gray-700 max-w-md">
+              Discover premium winter wear crafted with soft pastel tones for
+              comfort and elegance.
+            </p>
+
+            <button className="mt-6 w-fit bg-[#C7DBF2] text-[#2B2B2B] px-6 py-3 rounded-lg hover:bg-[#BFE3D0] transition">
+              Shop Now
+            </button>
+          </div>
+
+          <div className="h-[450px]">
+            <img
+              src="https://images.unsplash.com/photo-1602810316498-ab67cf68c8e1"
+              alt="Hero"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </section>
       </div>
 
-      {/* Content Section */}
-      <div className="bg-black flex items-center justify-center px-6 sm:px-10 md:px-20 py-10 md:py-0">
-        <div className="text-white max-w-md text-center md:text-left">
-
-          <p className="uppercase tracking-widest text-xs sm:text-sm text-gray-300 mb-3 sm:mb-4">
-            Spring Edit
-          </p>
-
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-light leading-tight mb-5 sm:mb-6">
-            Elegance in <br className="hidden sm:block" /> Every Step
-          </h1>
-
-          <p className="text-gray-400 mb-6 sm:mb-8">
-            Be two feet ahead of the rest
-          </p>
-
-          <button className="
-            w-full sm:w-auto
-            border border-white 
-            px-8 py-3 
-            text-sm tracking-widest
-            hover:bg-white hover:text-black 
-            transition
-          ">
-            SHOP NOW
-          </button>
-
-        </div>
-      </div>
-
-    </section>
-    <ProductLists />
-   </>
+      <ProductLists />
+    </>
   );
 }
